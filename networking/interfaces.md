@@ -2,11 +2,9 @@
 Unix Notes © 2021 by Noah Altunian is licensed under Attribution 4.0 International. To view a copy
 of this license, visit http://creativecommons.org/licenses/by/4.0/
 -->
-# Linux Network Configuration
+# Network Interfaces
 
-### Section 1: Network Interfaces
-
-#### General
+### General
 
 A network interface is the mechanism for mapping the software side of networking to the hardware devices
 that enable networking. You can review your existing network interfaces by running the following:
@@ -43,7 +41,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-#### ifconfig
+### ifconfig
 
 `ifconfig(8)` is a tool for configuring network interfaces. This is important because your kernel
 device drivers and network won't know how to talk with each other unless these interfaces exist.
@@ -87,7 +85,7 @@ eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 We can see that my virtual machine has two ethernet network interfaces. Also, the loopback interface
 represents your device on the network, and only you can make use of it.
 
-#### Interface states
+### Interface states
 
 Network interfaces may be **up** or **down**. This reflects whether you or your device can make use
 of them. Interfaces that are **up** may be used, and interfaces that are **down** may not.
@@ -113,9 +111,9 @@ ifconfig eth0 up
 ifconfig eth0 down
 ```
 
-#### ip
+### ip
 
-Although `ifconfig` is standard on all Linux boxes, a newer command `ip(8)` has been added since Linux
+Although `ifconfig` is standard on all Unix boxes, a newer command `ip(8)` has been added to the Linux
 kernel version 2.2. Likewise, it allows us to alter our network interfaces. Here are some examples:
 
 ```sh

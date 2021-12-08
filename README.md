@@ -1,6 +1,6 @@
 # unix notes
 
-Notes on common Unix topics.
+Notes on common Unix topics, with a heavier focus on GNU/Linux.
 
 ### License
 

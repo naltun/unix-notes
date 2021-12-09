@@ -1,5 +1,7 @@
 # unix notes
 
+![Unix license plate](https://www.aef.se/Elektronikutveckling/Bilder/1969_unix_225px_-_Kopia.jpg)
+
 Notes on common Unix topics, with a heavier focus on GNU/Linux.
 
 ### License

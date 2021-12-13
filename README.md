@@ -1,6 +1,16 @@
 # unix notes
 
-![Unix license plate](https://www.aef.se/Elektronikutveckling/Bilder/1969_unix_225px_-_Kopia.jpg)
+```sh
+         Live Free or Die
+ __    __  .__   __.  __  ___   ___ 
+|  |  |  | |  \ |  | |  | \  \ /  / 
+|  |  |  | |   \|  | |  |  \  V  /  
+|  |  |  | |  . `  | |  |   >   <   
+|  `--'  | |  |\   | |  |  /  .  \  
+ \______/  |__| \__| |__| /__/ \__\ 
+                                    
+
+```
 
 Notes on common Unix topics, with a heavier focus on GNU/Linux.
 

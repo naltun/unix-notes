@@ -1,6 +1,6 @@
 # unix notes
 
-```sh
+```
          Live Free or Die
  __    __  .__   __.  __  ___   ___ 
 |  |  |  | |  \ |  | |  | \  \ /  / 

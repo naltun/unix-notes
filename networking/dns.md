@@ -20,7 +20,7 @@ used to convert the domain name into a corresponding IP address.
 The easiest way to understand DNS, at a high level, is to think of it as a distributed database. It
 maps domain names to 1-or-more IP addresses hosting the web site or service.
 
-Here's a fun experiment
+Here's a fun experiment:
 ```sh
 [vagrant@arch unix-notes]$ curl --head --location --silent duckduckgo.com | awk '/200/'
 HTTP/2 200
@@ -29,7 +29,7 @@ HTTP/2 200
 HTTP/2 200
 ```
 
-In the first line, we use `curl` to grab the response header from requesting the index page for DuckDuckGo,
+In the first line, we use `curl` to request the index page for DuckDuckGo and grab the response header,
 and then we use `awk` to print the HTTP status. In the second, we use `dig +short` to grab the IP address,
 and then we use that instead of the domain name. Notice that we get `200` (e.g. `OK`) in both responses.
 

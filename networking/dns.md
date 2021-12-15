@@ -36,3 +36,43 @@ and then we use that instead of the domain name. Notice that we get `200` (e.g. 
 This essentially means that we can request a service by simply using its IP address. Since keeping
 track of tens, if not hundreds of IP addresses is difficult, DNS assists us by using easy-to-remember
 names for interacting with the services we love.
+
+### Building Blocks of DNS
+
+DNS is made up of various components. Let's learn about them.
+
+#### Name Servers
+
+The name server is the core block of DNS, and are tasked with answering DNS queries. If a client asks
+for DuckDuckGo and one name server doesn't know the details, it will redirect the client to another
+name server. This continues until the answer is found.
+
+Name servers are broken into two categories: authoritative, and recursive. Authoritative name servers
+know the exact details clients are looking for. Conversely, recursive name servers pass your query
+onto other name servers, until the authoritative name server is found. It is possible for recursive
+name servers to cache query responses from authoritative name servers. If this is the case, the recursive
+name server will return the query results.
+
+#### Zone Files
+
+Name servers have files called zone files. These files contain the configuration for how name servers
+store or cache information on domains, or where to look for the details if the name is non-authoritative.
+
+#### Resource Records
+
+Zone files are made up of resource records, which are entries of information for hosts, other name
+servers, and similar resources. These entries are composed of the following:
+
+```
++--------------------+----------------------------------------------------------------+
+| Record name        | name of the record                                             |
++--------------------+----------------------------------------------------------------+
+| TTL (Time To Live) | time after which we obtain a new resource record on a resource |
++--------------------+----------------------------------------------------------------+
+| Class              | namespace for a specific piece of data in a record             |
++--------------------+----------------------------------------------------------------+
+| Type               | type of data stored in the record                              |
++--------------------+----------------------------------------------------------------+
+| Data               | data stored for a specific record type                         |
++--------------------+----------------------------------------------------------------+
+```

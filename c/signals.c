@@ -6,7 +6,7 @@
  *
  *  tl;dr - compile and run with:
  *
- *      $ cc signals.h && ./a.out
+ *      $ cc signals.c && ./a.out
  *
  *
  *
